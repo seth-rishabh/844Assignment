@@ -48,10 +48,10 @@ recall = recall_score(y_test, y_pred, average = 'weighted')
 confusionMatrix = confusion_matrix(y_test, y_pred)
 
 
-print("Accuracy on test set:", round(accuracy,3)*100,"%")
+print("\nAccuracy on test set:", round(accuracy,3)*100,"%")
 print("F1 on test set:", round(f1,3)*100,"%")
 print("Precision on test set:", round(precision,3)*100,"%")
-print("Recall on test set:", round(recall, 3)*100,"%")
+print("Recall on test set:", round(recall, 3)*100,"%\n")
 print("Confusion Matrix on test set:\n", confusionMatrix)
 
 
@@ -62,7 +62,7 @@ f1_cv = cross_val_score(myTree, X, y, cv=10, scoring='f1_weighted')
 precision_cv = cross_val_score(myTree, X, y, cv=10, scoring='precision_weighted')
 recall_cv = cross_val_score(myTree, X, y, cv=10, scoring='recall_weighted')
 
-print(f"Cross-Validation Accuracy: {np.mean(accuracy_cv*100):.4f}%")
+print(f"\nCross-Validation Accuracy: {np.mean(accuracy_cv*100):.4f}%")
 print(f"Cross-Validation F1 Score: {np.mean(f1_cv*100):.4f}%")
 print(f"Cross-Validation Precision: {np.mean(precision_cv*100):.4f}%")
 print(f"Cross-Validation Recall: {np.mean(recall_cv*100):.4f}%")
