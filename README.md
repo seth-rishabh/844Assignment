@@ -5,5 +5,7 @@ Performing explorative analysis on lung cancer dataset with 5 different algorith
 To navigate the repository:
   - Dataset folder: where the lung cancer dataset is stored
   - models: where all 5 ML algorithm model code is stored
-        note: NaiveBayes.py contains code for gausian model, however, it was used to bench mark performance compared to bernioulli model and ultimately decide which one to use for analysis
+
+    note: NaiveBayes.py contains code for gausian model, however, it was used to bench mark performance compared to bernioulli model and ultimately decide which one to use for analysis
+
   - featureSelection: two feature selection models that use a filter based approach are stored 
