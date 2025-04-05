@@ -6,6 +6,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 from sklearn.neighbors import LocalOutlierFactor
 from sklearn.preprocessing import StandardScaler
 
@@ -37,8 +38,8 @@ data['anomalyScore'] = lof.negative_outlier_factor_
 data['isOutlier'] = np.where(outliers == -1, 1, 0)
 
 print(f"Number of outliers: {data['isOutlier'].sum()}\n")
-plt.figure(figsize=(10,6))
-plt.scatter(data['AGE'], data['anomalyScore'], c=data['isOutlier'], cmap='coolwarm')
-plt.xlabel('Age')
+plt.figure(figsize=(8,6))
+sns.boxplot(x='LUNG_CANCER', y='anomalyScore', data=data)
+plt.xlabel('Lung Cancer (0=No, 1=Yes)')
 plt.ylabel('Anomaly Score')
 plt.show()
